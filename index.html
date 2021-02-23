@@ -5,8 +5,97 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roman Khoroshaylo CV</title>
-</head>
+  <link rel="stylesheet" href="/style/styles.css">
+  <link rel="stylesheet" href="/style/code-theme-monokai.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet">
 <body>
-  
+  <header class="header">
+    <h1 class="header__title">Roman Khoroshaylo</h1>
+    <nav class="header__menu">
+      <ul class="menu__container">
+        <li class="menu__item">
+          <a class="menu__link" href="#about">about me</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#skills">skills</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#code">code example</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#experience">experience</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#contacts">contacts</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="about__container" id="about">
+      <div class="about__content">
+        <h2 class="about__title title--left">About me</h2>
+        <p class="about__text">
+          I am currently working in a non-programming position. But I often write Powershell and VBA scripts for MS Access to automate and streamline workflows. I want to change specialization and become a <strong>Front-end</strong> or <strong>FullStack</strong> web developer. I am interested in exploring this way and hope to learn the full development cycle.
+        </p>
+      </div>
+      <div class="about__photo">
+        <img src="https://sun9-30.userapi.com/impf/c855336/v855336424/47d28/Suawpm_yVgI.jpg?size=1050x1080&quality=96&proxy=1&sign=e99c53f5adc08a7bcb00ceaf66beec47&type=album" alt="Roman`s photo">
+      </div>
+    </section>
+    <section class="skills__container" id="skills">
+      <h2 class="skills__title title--right">My skills</h2>
+      <ul class="skills__list">
+        <li class="skill__item skill__item--html">HTML + CSS</li>
+        <li class="skill__item skill__item--js">JavaScript (ES6)</li>
+        <li class="skill__item skill__item--fig">Figma</li>
+        <li class="skill__item skill__item--git">git + GitHub</li>
+        <li class="skill__item skill__item--node">Node.js + Express.js</li>
+        <li class="skill__item skill__item--sql">SQL</li>
+      </ul>
+    </section>
+    <section class="code__container" id="code">
+      <h2 class="code__title title--left">Code example</h2>
+      <pre class="code__content"><code class="language-javascript">
+        function timeCorrect(timestring) {
+          if (timestring === "") {
+            return "";
+          }
+
+          const regexp = new RegExp(/\d\d:\d\d:\d\d/);
+
+          if (!regexp.test(timestring)) {
+            return null;
+          } else {
+            const timeArr = timestring.split(":").map((i) => parseInt(i));
+
+            timeArr[1] += Math.floor(timeArr[2] / 60);
+            timeArr[0] += Math.floor(timeArr[1] / 60);
+
+            timeArr[2] = timeArr[2] % 60;
+            timeArr[1] = timeArr[1] % 60;
+            timeArr[0] = timeArr[0] % 24;
+
+            return timeArr.map((i) => (i < 10 ? `0${i}` : i)).join(":");
+          }
+        };
+
+        timeCorrect(null); //> null
+        timeCorrect(""); //> ""
+        timeCorrect("001122"); //> null
+        timeCorrect("00;11;22"); //> null
+        timeCorrect("0a:1c:22"); //> null
+        timeCorrect("09:10:01"); //> "09:10:01"
+        timeCorrect("11:70:10"); //> "12:10:10"
+        timeCorrect("19:99:09"); //> "20:39:09"
+        timeCorrect("19:99:99"); //> "20:40:39"
+        timeCorrect("24:01:01"); //> "00:01:01"
+        timeCorrect("52:01:01"); //> "04:01:01"
+      </code></pre>
+    </section>
+    <section class="experience__container" id="experience"></section>
+  </main>
+<script src="/scripts/rainbow-custom.min.js"></script>
 </body>
 </html>
