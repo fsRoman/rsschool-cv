@@ -164,7 +164,6 @@ img {
   color: var(--color-font);
   background-repeat: no-repeat;
   background-size: 90px;
-  transition: 0.4s;
 }
 .skill__item--html::before {
   background-image: url("/img/html.svg"), url("/img/css.svg");
@@ -227,12 +226,59 @@ img {
   position: relative;
   right: 70%;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .code__content {
   width: 80%;
+  height: 500px;
   margin: 0 auto;
   padding-top: 10px;
-  font-size: 1.1em;
+  overflow-y: scroll;
+  font-size: 1em;
   background-color: var(--color-secondary);
+}
+.experience__container {
+  height: 800px;
+  padding-top: 100px;
+}
+
+.experience__title {
+  margin-left: 65%;
+  margin-bottom: 60px;
+}
+.experience__content {
+  padding-left: 10%;
+}
+.experience__itemlist {
+  font-size: 1.5em;
+  counter-reset: li;
+}
+.experience__item {
+  margin-bottom: 20px;
+  list-style-type: none;
+  color: var(--color-muted);
+  background-color: var(--color-secondary);
+  /* transition: .5s; */
+}
+.experience__item::before {
+  counter-increment: li;
+  content: counter(li) "/";
+  color: var(--color-font);
+  font-size: 2em;
+}
+.experience__item:hover .experience__subitem {
+  height: 50px;
+  /* visibility: visible; */
+}
+.experience__subitem {
+  height: 0;
+  /* visibility: hidden; */
+  transition: .5s;
+}
+
+.experience__subitem::before {
+  position: relative;
+  top: -50px;
+  content: ".";
+  color: var(--color-primary);
 }
