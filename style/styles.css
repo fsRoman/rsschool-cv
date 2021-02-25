@@ -258,7 +258,8 @@ img {
   background-color: var(--color-secondary);
 }
 .experience__container {
-  height: 800px;
+  min-height: 600px;
+  margin-bottom: 200px;
   padding-top: 100px;
 }
 
@@ -294,6 +295,9 @@ img {
 }
 .experience__spoiler summary:focus {
   outline: unset;
+}
+.experience__subitemlist {
+  margin-top: 15px;
 }
 .experience__subitem {
   margin-left: 30px;
