@@ -78,7 +78,7 @@
             timeArr[1] = timeArr[1] % 60;
             timeArr[0] = timeArr[0] % 24;
 
-            return timeArr.map((i) => (i < 10 ? `0${i}` : i)).join(":");
+            return timeArr.map((i) => (i &lt; 10 ? `0${i}` : i)).join(":");
           }
         };
 
