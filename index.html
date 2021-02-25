@@ -37,9 +37,9 @@
     <section class="about__container" id="about">
       <div class="about__content">
         <h2 class="about__title title--left">About me</h2>
-        <p class="about__text">
+        <article class="about__text">
           I am currently working in a non-programming position. But I often write Powershell and VBA scripts for MS Access to automate and streamline workflows. I want to change specialization and become a <strong>Front-end</strong> or <strong>FullStack</strong> web developer. I am interested in exploring this way and hope to learn the full development cycle.
-        </p>
+        </article>
       </div>
       <div class="about__photo">
         <img src="https://sun9-30.userapi.com/impf/c855336/v855336424/47d28/Suawpm_yVgI.jpg?size=1050x1080&quality=96&proxy=1&sign=e99c53f5adc08a7bcb00ceaf66beec47&type=album" alt="Roman`s photo">
@@ -58,57 +58,70 @@
     </section>
     <section class="code__container" id="code">
       <h2 class="code__title title--left">Code example</h2>
-      <pre class="code__content"><code class="language-javascript">
-        function timeCorrect(timestring) {
-          if (timestring === "") {
-            return "";
-          }
+      <figure class="code__content">
+        <figcaption class="code__caption">Example of function <code>timeCorrect(timestring)</code> that corrects a given time string.</figcaption>
+          <pre>
+            <code class="language-javascript">
+              function timeCorrect(timestring) {
+                if (timestring === "") {
+                  return "";
+                }
 
-          const regexp = new RegExp(/\d\d:\d\d:\d\d/);
+                const regexp = new RegExp(/\d\d:\d\d:\d\d/);
 
-          if (!regexp.test(timestring)) {
-            return null;
-          } else {
-            const timeArr = timestring.split(":").map((i) => parseInt(i));
+                if (!regexp.test(timestring)) {
+                  return null;
+                } else {
+                  const timeArr = timestring.split(":").map((i) => parseInt(i));
 
-            timeArr[1] += Math.floor(timeArr[2] / 60);
-            timeArr[0] += Math.floor(timeArr[1] / 60);
+                  timeArr[1] += Math.floor(timeArr[2] / 60);
+                  timeArr[0] += Math.floor(timeArr[1] / 60);
 
-            timeArr[2] = timeArr[2] % 60;
-            timeArr[1] = timeArr[1] % 60;
-            timeArr[0] = timeArr[0] % 24;
+                  timeArr[2] = timeArr[2] % 60;
+                  timeArr[1] = timeArr[1] % 60;
+                  timeArr[0] = timeArr[0] % 24;
 
-            return timeArr.map((i) => (i &lt; 10 ? `0${i}` : i)).join(":");
-          }
-        };
+                  return timeArr.map((i) => (i &lt; 10 ? `0${i}` : i)).join(":");
+                }
+              };
 
-        timeCorrect(null); //> null
-        timeCorrect(""); //> ""
-        timeCorrect("001122"); //> null
-        timeCorrect("00;11;22"); //> null
-        timeCorrect("0a:1c:22"); //> null
-        timeCorrect("09:10:01"); //> "09:10:01"
-        timeCorrect("11:70:10"); //> "12:10:10"
-        timeCorrect("19:99:09"); //> "20:39:09"
-        timeCorrect("19:99:99"); //> "20:40:39"
-        timeCorrect("24:01:01"); //> "00:01:01"
-        timeCorrect("52:01:01"); //> "04:01:01"
-      </code></pre>
+              timeCorrect(null); //> null
+              timeCorrect(""); //> ""
+              timeCorrect("001122"); //> null
+              timeCorrect("00;11;22"); //> null
+              timeCorrect("0a:1c:22"); //> null
+              timeCorrect("09:10:01"); //> "09:10:01"
+              timeCorrect("11:70:10"); //> "12:10:10"
+              timeCorrect("19:99:09"); //> "20:39:09"
+              timeCorrect("19:99:99"); //> "20:40:39"
+              timeCorrect("24:01:01"); //> "00:01:01"
+              timeCorrect("52:01:01"); //> "04:01:01"
+            </code>
+          </pre>
+      </figure>
     </section>
     <section class="experience__container" id="experience">
       <h2 class="experience__title title--right">Experience</h2>
       <div class="experience__content">
         <ol class="experience__itemlist">
-          <li class="experience__item">took courses on a <a class="link" href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a>
-            <ul class="experience__subitemlist">
-              <li class="experience__subitem">Basic JS</li>
-              <li class="experience__subitem">Basic HTML and CSS</li>
-              <li class="experience__subitem">Applied Visual Design</li>
-              <li class="experience__subitem">Responsive Web Design Principles</li>
-              <li class="experience__subitem">CSS Flexbox</li>
-            </ul>
+          <li class="experience__item">
+            <details class="experience__spoiler">
+                <summary>took courses on a <a class="link" href="https://www.freecodecamp.org" target="_blank">FreeCodeCamp</a>
+                </summary>
+                <ul class="experience__subitemlist">
+                  <li class="experience__subitem">Basic JS</li>
+                  <li class="experience__subitem">Basic HTML and CSS</li>
+                  <li class="experience__subitem">Applied Visual Design</li>
+                  <li class="experience__subitem">Responsive Web Design Principles</li>
+                  <li class="experience__subitem">CSS Flexbox</li>
+                </ul>
+            </details>
           </li>
-          <li class="experience__item">from 20.02.2021 to the present time apprentice <a class="link" href="https://rs.school/js" target="_blank">RS School</a>
+          <li class="experience__item">
+            <details class="experience__spoiler">
+                <summary>from <time datetime="2021-02-20">20.02.2021</time> to the present time apprentice <a class="link" href="https://rs.school/js" target="_blank">RS School</a>
+                </summary>
+            </details>
           </li>
         </ol>
       </div>

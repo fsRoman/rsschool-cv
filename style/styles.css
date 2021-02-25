@@ -245,11 +245,14 @@ img {
   margin-top: 20px;
   margin-bottom: 50px;
 }
+.code__caption {
+  padding: 5px 10px;
+  color: var(--color-muted);
+}
 .code__content {
   width: 80%;
   height: 400px;
   margin: 0 auto;
-  padding-top: 10px;
   overflow-y: scroll;
   font-size: 1em;
   background-color: var(--color-secondary);
@@ -271,20 +274,26 @@ img {
 }
 .experience__item {
   margin-bottom: 20px;
-  padding-bottom: 10px;
-  padding-left: 15px;
+  padding-left: 1em;
   list-style-type: none;
   font-size: 1.5em;
   color: var(--color-muted);
   background-color: var(--color-secondary);
 }
 .experience__item::before {
-  display: inline-block;
-  padding-right: 10px;
+  position: absolute;
+  left: calc(10% + 1em);
+  display: block;
   counter-increment: li;
-  content: counter(li) ".";
+  content: counter(li);
   font-size: 2em;
   color: var(--color-primary);
+}
+.experience__spoiler {
+  padding: 20px;
+}
+.experience__spoiler summary:focus {
+  outline: unset;
 }
 .experience__subitem {
   margin-left: 30px;
@@ -317,6 +326,7 @@ img {
 .contact__link {
   color: inherit;
   margin-right: 10px;
+  transition: .5s;
 }
 .contact__link:hover {
   color: var(--color-primary);
