@@ -45,7 +45,7 @@ code {
   transition: .5s;
 }
 .link::after {
-  background: transparent url('/img/link.svg') 0 0 no-repeat;
+  background: transparent url("../img/link.svg") 0 0 no-repeat;
   background-size: .8em;
   content: "";
   display: inline-block;
@@ -183,32 +183,32 @@ img {
   background-size: 90px;
 }
 .skill__item--html::before {
-  background-image: url("/img/html.svg"), url("/img/css.svg");
+  background-image: url("../img/html.svg"), url("../img/css.svg");
   background-position: 75% 75%, 28% 40%;
 }
 .skill__item--html:hover::before {
-  background-image: url("/img/html-primary.svg"), url("/img/css-primary.svg");
+  background-image: url("../img/html-primary.svg"), url("../img/css-primary.svg");
 }
 .skill__item--js::before {
-  background-image: url("/img/js.svg");
+  background-image: url("../img/js.svg");
   background-position: 50% 55%;
 }
 .skill__item--js:hover::before {
-  background-image: url("/img/js-primary.svg");
+  background-image: url("../img/js-primary.svg");
 }
 .skill__item--fig::before {
-  background-image: url("/img/figma.svg");
+  background-image: url("../img/figma.svg");
   background-position: 90% 5%;
 }
 .skill__item--fig:hover::before {
-  background-image: url("/img/figma-primary.svg");
+  background-image: url("../img/figma-primary.svg");
 }
 .skill__item--git::before {
-  background-image: url("/img/git.svg"), url("/img/github.svg");
+  background-image: url("../img/git.svg"), url("../img/github.svg");
   background-position: 65% 15%, 8% 70%;
 }
 .skill__item--git:hover::before {
-  background-image: url("/img/git-primary.svg"), url("/img/github-primary.svg");
+  background-image: url("../img/git-primary.svg"), url("../img/github-primary.svg");
 }
 .skill__item--node::before {
   left: 5%;
@@ -216,11 +216,11 @@ img {
   content: "express";
   font-family: "Work Sans", sans-serif;
   font-size: 3em;
-  background-image: url("/img/node.svg");
+  background-image: url("../img/node.svg");
   background-position: 95% 90%;
 }
 .skill__item--node:hover::before {
-  background-image: url("/img/node-primary.svg");
+  background-image: url("../img/node-primary.svg");
   color: var(--color-primary);
 }
 .skill__item--sql::before {
