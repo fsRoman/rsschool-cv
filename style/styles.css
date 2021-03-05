@@ -166,10 +166,6 @@ img {
   margin: 0 auto;
   justify-content: space-between;
 }
-.skill__logo,
-.skill__item {
-  transition: .3s;
-}
 .skills__container::before {
   position: absolute;
   left: -20%;
@@ -179,61 +175,9 @@ img {
   content: '';
   background-color: var(--color-secondary);
 }
-.skills__logos {
-  position: relative;
-  width: 65%;
-}
-.skill__logo {
-  position: absolute;
-  width: 90px;
-  list-style-type: none;
-  -moz-user-select: -moz-none;
-  -o-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.skill__logo--css {
-  top: 30%;
-  left: 22%;
-}
-.skill__logo--html {
-  top: 55%;
-  left: 65%;
-}
-.skill__logo--js {
-  top: 45%;
-  left: 43%;
-}
-.skill__logo--fig {
-  top: 10%;
-  left: 80%;
-}
-.skill__logo--git {
-  top: 15%;
-  left: 55%;
-}
-.skill__logo--gh {
-  top: 60%;
-  left: 5%;
-}
-.skill__logo--node {
-  top: 65%;
-  left: 85%;
-}
-.skill__logo--expr {
-  top: 5%;
-  left: 0%;
-  font-family: "Work Sans", sans-serif;
-  font-size: 72px;
-}
-.skill__logo--sql {
-  top: 70%;
-  left: 27%;
-  font-size: 60px;
-}
 .skills__list {
   position: relative;
+  left: 65%;
   width: 35%;
   height: 400px;
   padding-top: 40px;
@@ -242,19 +186,81 @@ img {
   flex-direction: column;
   justify-content: space-between;
   font-size: 1.5em;
-  color: var(--color-muted);
+}
+.skill__item,
+.skill__logo {
+  transition: .3s;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 .skill__item {
   padding-left: 10px;
   list-style-type: none;
-  border-left: 1px solid var(--color-primary);
+  color: var(--color-muted);
+}
+.skill__item:hover {
+  border-left: 5px solid var(--color-primary);
+  transition: .3s;
+}
+.skill__logo {
+  position: absolute;
+  width: 90px;
+  color: var(--color-font);
+}
+.skill__logo--css {
+  top: 30%;
+  left: -145%;
+}
+.skill__logo--html {
+  top: 55%;
+  left: -65%;
+}
+.skill__logo--js {
+  top: 45%;
+  left: -106%;
+}
+.skill__logo--fig {
+  top: 10%;
+  left: -37%;
+}
+.skill__logo--git {
+  top: 15%;
+  left: -83%;
+}
+.skill__logo--gh {
+  top: 60%;
+  left: -177%;
+}
+.skill__logo--node {
+  top: 65%;
+  left: -28%;
+}
+.skill__logo--expr {
+  top: 5%;
+  left: -186%;
+  font-family: "Work Sans", sans-serif;
+  font-size: 72px;
+}
+.skill__logo--sql {
+  top: 70%;
+  left: -135%;
+  font-size: 60px;
 }
 .skill__item--html:hover,
+.skill__item--html:hover .skill__logo,
 .skill__item--js:hover,
+.skill__item--js:hover .skill__logo,
 .skill__item--fig:hover,
+.skill__item--fig:hover .skill__logo,
 .skill__item--git:hover,
+.skill__item--git:hover .skill__logo,
 .skill__item--node:hover,
-.skill__item--sql:hover {color: var(--color-primary)}
+.skill__item--node:hover .skill__logo,
+.skill__item--sql:hover,
+.skill__item--sql:hover .skill__logo {color: var(--color-primary)}
 
 .code__container {
   min-height: 800px;
