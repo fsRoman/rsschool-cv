@@ -332,6 +332,9 @@ img {
   margin-bottom: 10px;
   list-style-type: square;
 }
+.footer {
+  margin: 0 auto;
+}
 .contacts__container {
   height: 400px;
   padding-top: 100px;
@@ -343,7 +346,8 @@ img {
   color: var(--color-muted);
 }
 .contacts__content {
-  padding: 100px 10%;
+  width: 80%;
+  margin: 100px auto;
 }
 .contacts__list {
   display: flex;
